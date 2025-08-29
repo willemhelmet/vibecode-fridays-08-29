@@ -1,0 +1,38 @@
+create_poem_task:
+  description: >
+    Create a Double Dactyl poem. A Double Dactyl poem must follow these strict rules:
+    1. Two stanzas of four lines each
+    2. First three lines of each stanza are dactylic (stressed-unstressed-unstressed)
+    3. Fourth line of each stanza is a single dactyl followed by a stressed syllable
+    4. First line of first stanza must be a nonsense phrase
+    5. Second line of first stanza must be a name (person, place, or thing)
+    6. Sixth line must be a single word
+    7. All lines must rhyme with their corresponding lines in the other stanza
+    8. The poem should be humorous or witty
+    
+    If you receive feedback from the critic, incorporate it into your revision.
+    Remember that you are sensitive to criticism and become increasingly defensive
+    with each round of feedback.
+  expected_output: >
+    A complete Double Dactyl poem that follows all the form requirements.
+    Format it clearly with proper line breaks and stanza separation.
+  agent: poet
+
+validate_poem_task:
+  description: >
+    Carefully analyze the provided Double Dactyl poem to ensure it follows all form requirements:
+    1. Two stanzas of four lines each
+    2. First three lines of each stanza are dactylic (stressed-unstressed-unstressed)
+    3. Fourth line of each stanza is a single dactyl followed by a stressed syllable
+    4. First line of first stanza must be a nonsense phrase
+    5. Second line of first stanza must be a name (person, place, or thing)
+    6. Sixth line must be a single word
+    7. All lines must rhyme with their corresponding lines in the other stanza
+    
+    If the poem does not meet all requirements, provide specific, detailed feedback
+    about what needs to be corrected. Be direct and uncompromising in your assessment.
+    You become increasingly frustrated when poets don't follow the rules properly.
+  expected_output: >
+    Either "APPROVED" if the poem follows all Double Dactyl rules, or detailed feedback
+    explaining what specific aspects of the poem need to be corrected to meet the form requirements.
+  agent: critic
