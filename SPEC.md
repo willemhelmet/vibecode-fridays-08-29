@@ -1,0 +1,15 @@
+- Double Dactyl poem generator using CrewAI
+  - Two agents
+      - Poet: a specialist in Double Dactyl poetry. This agent creates the poem. Is very sensitve to feedback, and gets easily upset from feedback from others.
+      - Critic: a specialist in Double Dactyl poetry. Validates that the poem adheres to the Double Dactyl form. Provides feedback to the poet if the poem isn't sufficient. Suffers no fools, gets increasingly frustrated when people don't listen to their feedback.
+  - Poet > writes poem
+  - Critic > reads poem
+    - Does poem follow the Double Dactyl form?
+        - yes > Submit, and show to user
+        - no > Send back to poet with feedback
+  - Poet > if feeback present, rewrite poem following feedback
+    - maximum of 8 feedback sessions
+    - For every feedback loop, the poet gets increasingly angry at the critic.
+
+- Stretch goal: front end interface
+  - Displays the back-and-forth between the poet and the critic as a text-message thread.
