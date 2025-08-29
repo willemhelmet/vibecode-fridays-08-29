@@ -86,11 +86,14 @@ class DoubleDactylGenerator():
             Revise your Double Dactyl poem based on the critic's feedback.
             
             Your previous poem:
+            <poem>
             {previous_poem}
+            </poem>
             
             Critic's feedback:
+            <feedback>
             {feedback}
-            
+
             {anger_context} However, you must still follow the Double Dactyl form requirements:
             1. Two stanzas of four lines each
             2. First three lines of each stanza are dactylic (stressed-unstressed-unstressed)
@@ -102,6 +105,7 @@ class DoubleDactylGenerator():
             8. The poem should be humorous or witty
             
             Incorporate the feedback while maintaining your artistic vision.
+            </feedback>
             """,
             expected_output="A revised Double Dactyl poem that addresses the critic's feedback.",
             agent=self.poet()
