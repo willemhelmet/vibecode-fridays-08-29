@@ -5,19 +5,17 @@ description = "double-dactyl-generator using crewAI"
 authors = [{ name = "Your Name", email = "you@example.com" }]
 requires-python = ">=3.10,<3.14"
 dependencies = [
-    "crewai[tools]>=0.165.1,<1.0.0"
+    "crewai>=0.175.0,<1.0.0"
 ]
 
 [project.scripts]
-double_dactyl_generator = "double_dactyl_generator.main:run"
-run_crew = "double_dactyl_generator.main:run"
-train = "double_dactyl_generator.main:train"
-replay = "double_dactyl_generator.main:replay"
-test = "double_dactyl_generator.main:test"
+kickoff = "double_dactyl_generator.main:kickoff"
+run_crew = "double_dactyl_generator.main:kickoff"
+plot = "double_dactyl_generator.main:plot"
 
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [tool.crewai]
-type = "crew"
+type = "flow"

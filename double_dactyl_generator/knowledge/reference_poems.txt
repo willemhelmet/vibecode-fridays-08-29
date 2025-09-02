@@ -1,0 +1,36 @@
+REFERENCE DOUBLE DACTYL POEMS
+
+These are examples of correctly formed Double Dactyl poems that both the poet and critic should use as reference.
+
+EXAMPLE 1:
+Higgledy piggledy,
+Benjamin Harrison,
+Twenty-third president
+Was, and, as such,
+
+Served between Clevelands and
+Save for this trivial
+Idiosyncrasy,
+Didn't do much.
+
+EXAMPLE 2:
+Long-short-short, long-short-short
+Dactyls in dimeter,
+Verse form with choriambs
+(Masculine rhyme):
+
+One sentence, two stanzas
+Hexasyllabically
+Challenges poets who
+Don't have the time.
+
+
+METER PATTERNS:
+- Lines 1, 2, 3, 5, 6, 7: dactylic dimeter (6 syllables: stressed-unstressed-unstressed-stressed-unstressed-unstressed)
+- Lines 4, 8: choriamb (4 syllables: stressed-unstressed-unstressed-stressed)
+
+STRUCTURAL REQUIREMENTS:
+- Line 1: nonsense phrase (like "Higgledy-piggledy")
+- Line 2: proper noun (person's name)
+- Line 6: single word
+- Lines 4 and 8: must rhyme exactly

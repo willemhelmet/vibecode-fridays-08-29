@@ -1,0 +1,42 @@
+create_poem_task:
+  description: >
+    Create a Double Dactyl poem. A Double Dactyl poem must follow these strict rules:
+    1. Two stanzas of four lines each
+    2. First three lines of each stanza are dactylic dimeter (stressed-unstressed-unstressed-stressed-unstressed-unstressed)
+    3. Fourth line of each stanza is a choriamb (stressed-unstressed-unstressed-stressed)
+    4. First line of first stanza must be a nonsense phrase
+    5. Second line of first stanza must be a proper noun
+    6. Sixth line must be a single word
+    7. Lines four and eight must rhyme
+    8. The poem should be humorous or witty
+    
+    METER EXPLANATION:
+    - Dactylic dimeter = 6 syllables with pattern: STRESSED-unstressed-unstressed-STRESSED-unstressed-unstressed
+    - Choriamb = 4 syllables with pattern: STRESSED-unstressed-unstressed-STRESSED
+    - Examples of dactylic dimeter: "Famous for bantering," (FA-mous-for-BAN-ter-ing)
+    - Examples of choriamb: "But always gruff." (BUT-al-ways-GRUFF)
+    
+    FIRST: Use the reference_reader_tool to read "knowledge/reference_poems.txt" and study the examples.
+    
+    REVISION INSTRUCTIONS:
+    When revising a previous poem with issues:
+    1. Read the issues carefully - each issue specifies a line number and problem
+    2. ONLY modify the lines that are flagged for issues
+    3. For "not dactylic dimeter" issues:
+       - Count syllables: the line must have exactly 6 syllables
+       - Check stress pattern: STRESSED-unstressed-unstressed-STRESSED-unstressed-unstressed
+       - Common fixes: add/remove words, change word choice to match syllable count
+    4. For "not a single word" issues: ensure line 6 contains only one word
+    5. Keep all other lines exactly the same - they are working correctly
+    
+    <previous_poem>
+    {previous_poem}
+    </previous_poem>
+    
+    <issues>
+    {issues}
+    </issues>
+  expected_output: >
+    A complete Double Dactyl poem that follows all the form requirements.
+    Format it clearly with proper line breaks and stanza separation.
+  agent: poet

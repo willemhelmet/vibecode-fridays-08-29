@@ -6,12 +6,12 @@ Welcome to the Double Dactyl Poem Generator, powered by [crewAI](https://crewai.
 
 A Double Dactyl is a humorous poetic form with strict rules:
 - Two stanzas of four lines each
-- First three lines of each stanza are dactylic (stressed-unstressed-unstressed)
-- Fourth line of each stanza is a single dactyl followed by a stressed syllable
+- First three lines of each stanza are dactylic dimeter (stressed-unstressed-unstressed-stressed-unstressed-unstressed)
+- Fourth line of each stanza is a choriamb (stressed-unstressed-unstressed-stressed)
 - First line of first stanza must be a nonsense phrase
-- Second line of first stanza must be a name (person, place, or thing)
+- Second line of first stanza must be a proper noun
 - Sixth line must be a single word
-- All lines must rhyme with their corresponding lines in the other stanza
+- Lines four and eight must rhyme
 
 ## The Agents
 
@@ -42,11 +42,30 @@ crewai install
 **Add your API keys to the `.env` file:**
 - `OPENROUTER_API_KEY` - Your OpenRouter API key
 - `OPENROUTER_BASE_URL` - OpenRouter base URL
-- `MODEL` - The model to use (e.g., "anthropic/claude-3.5-sonnet")
+- `MODEL` - The model to use (e.g., "openrouter/openai/gpt-5")
 
 ## Running the Project
 
-### Generate a poem with feedback loop (recommended)
+### Run the CrewAI Flow (recommended)
+The CrewAI flow provides an automated feedback loop between the poet and critic agents:
+
+```bash
+# Navigate to the project directory
+cd double_dactyl_generator
+
+# Activate the virtual environment (if using uv)
+source .venv/bin/activate
+
+# Run the CrewAI flow
+crewai flow kickoff
+```
+
+**Note**: If you encounter issues with the `crewai flow kickoff` command, ensure:
+1. Your virtual environment is activated
+2. The package is installed in development mode: `uv pip install -e .`
+3. Your `.env` file contains the required API keys
+
+### Generate a poem with feedback loop (legacy method)
 ```bash
 crewai run
 ```

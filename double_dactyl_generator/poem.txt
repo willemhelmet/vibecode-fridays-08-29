@@ -1,0 +1,55 @@
+
+
+Iteration: 1
+Poem:
+Higgledy piggledy,  
+Albert Einstein was  
+Known for relativity,  
+Physics profound.  
+
+Calculability!  
+E equals mc-squared,  
+Formulas bubbling up,  
+Spinning around.
+
+Issues:n[Issue(line_number=2, problem='proper noun has only 5 syllables'), Issue(line_number=4, problem='does not rhyme with line 8'), Issue(line_number=6, problem='not a single word; multiple elements')]
+
+Iteration: 2
+Poem:
+Higgledy piggledy,  
+Alexander Hamilton,  
+Wrote the whole Federalist,  
+Founding renown.
+
+Constitutionally,  
+Noninterventionist,  
+Arguments, eloquent,  
+Shaped the crown.
+
+Issues:n[Issue(line_number=3, problem='not dactylic dimeter'), Issue(line_number=4, problem='not choriamb, does not rhyme with line 8'), Issue(line_number=5, problem='not dactylic dimeter'), Issue(line_number=6, problem='not a single 6-syllable word'), Issue(line_number=7, problem='not dactylic dimeter'), Issue(line_number=8, problem='not choriamb, does not rhyme with line 4')]
+
+Iteration: 3
+Poem:
+Higgledy piggledy,  
+Alexander Hamilton,  
+Writing and arguing,  
+Lawful and proud.
+
+Revolutionary,  
+Individuality,  
+Philosophy,  
+Head in a cloud.
+
+Issues:n[Issue(line_number=3, problem='not dactylic dimeter'), Issue(line_number=4, problem='not choriamb, 5 syllables instead of 4'), Issue(line_number=5, problem='not dactylic dimeter'), Issue(line_number=6, problem='not a single six-syllable word'), Issue(line_number=7, problem='not dactylic dimeter'), Issue(line_number=8, problem='not choriamb, 5 syllables instead of 4; does not rhyme with line 4')]
+
+Iteration: 4
+Poem:
+Higgledy piggledy,  
+Alexander Hamilton,  
+Federal documents,  
+Stylish and proud.
+
+Revolutionary,  
+Constitutionality,  
+Dramatically,  
+Winning aloud.

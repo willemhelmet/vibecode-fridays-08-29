@@ -1,0 +1,59 @@
+validate_poem_task:
+  description: >
+    Carefully analyze the provided Double Dactyl poem to ensure it follows all form requirements.
+    
+    FIRST: Use the reference_reader_tool to read "knowledge/reference_poems.txt" and study the examples.
+    Pay close attention to the meter patterns, syllable counts, and rhyme schemes shown in the reference poems.
+    
+    CRITICAL: You must be ACCURATE in your analysis. Double-check your syllable counts and stress patterns.
+    If you are unsure about a line, mark it as CORRECT rather than guessing.
+    
+    METER REQUIREMENTS (be very careful with these):
+    - Line 1: Must be nonsense phrase with 6 syllables (like "Higgledy-piggledy")
+    - Line 2: Must be proper noun with 6 syllables in dactylic dimeter
+    - Line 3: Must be 6 syllables in dactylic dimeter
+    - Line 4: Must be 4 syllables in choriamb pattern
+    - Line 5: Must be 6 syllables in dactylic dimeter
+    - Line 6: Must be single word with 6 syllables
+    - Line 7: Must be 6 syllables in dactylic dimeter
+    - Line 8: Must be 4 syllables in choriamb pattern AND rhyme with line 4
+    
+    SYLLABLE COUNTING RULES:
+    - Count each syllable carefully - don't guess
+    - "Emily Dickinson" = 6 syllables (Em-i-ly Dick-in-son)
+    - "Higgledy-piggledy" = 6 syllables (Hig-gle-dy-pig-gle-dy)
+    - "Holed up in Amherst, wrote" = 6 syllables (Holed-up-in-Am-herst-wrote)
+    
+    STRESS PATTERNS:
+    - Dactylic dimeter = two dactyl feet (stressed-unstressed-unstressed)
+    - Choriamb = stressed-unstressed-unstressed-stressed
+    - Don't overthink stress patterns - focus on syllable count first
+    
+    ANALYSIS PROCESS:
+    1. Count syllables for each line carefully
+    2. Check if the line meets its specific requirement (nonsense, proper noun, single word, etc.)
+    3. Only flag lines that CLEARLY violate the rules
+    4. If you're unsure, the line is probably correct
+    
+    OUTPUT FORMAT - You must return a JSON object with a structure like this:
+    {
+      "valid": false,
+      "issues": [
+        {"line_number": 3, "problem": "not dactylic dimeter"},
+        {"line_number": 7, "problem": "not dactylic dimeter"}
+      ]
+    }
+    
+    If all lines are correct, return:
+    {
+      "valid": true,
+      "issues": []
+    }
+
+    Poem to Verify: 
+    <poem>
+    {poem}
+    </poem>
+  expected_output: >
+    A JSON object with "valid" boolean and "issues" array containing only problematic lines.
+  agent: critic
